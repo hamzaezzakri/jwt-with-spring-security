@@ -1,0 +1,37 @@
+server:
+  port: 8888
+
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+
+  mail:
+    host: localhost
+    port: 1025
+    username: hamzaEzzakri
+    password: JWTSecurity
+    properties:
+      mail:
+        smtp:
+          ssl:
+            trust: '*'
+          starttls:
+            enable: true
+          auth: true
+
+  datasource:
+    password: ''
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/db_springsecurity_jwt?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=true&useUnicode=yes&useLegacyDatetimeCode=false&serverTimezone=UTC
+
+app:
+  email: zakri7740@gmail.com
+  personal: Hamza Ezzakri
+  jwtSecret: '@zeRtY193!'
+  jwtExpirationMs: 86400000
